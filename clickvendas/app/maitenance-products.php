@@ -1,16 +1,16 @@
 <?php 
 
-use \Click\PageMaitenance;
-use \Click\Model\UserMaitenance;
+use \Click\pageMaitenance;
+use \Click\Model\userMaitenance;
 use \Click\Model\ProductMaitenance;
 
 $app->get('/maitenance/products', function(){
 
-	UserMaitenance:: verifyLogin();
+	userMaitenance:: verifyLogin();
 
 	$maitenance = ProductMaitenance::listAll();
 
-	$page = new PageMaitenance();
+	$page = new pageMaitenance();
 
 	$page ->setTpl("products", array(
 		"maitenance"=>$maitenance
@@ -20,13 +20,13 @@ $app->get('/maitenance/products', function(){
  
 $app->get('/maitenance/products/:iduser',function($idassistance){
 	
-	UserMaitenance::verifyLogin();	
+	userMaitenance::verifyLogin();	
 	
 	$maitenance = new ProductMaitenance();	
 	
 	$maitenance->get((int) $idassistance);	
 	
-	$page = new PageMaitenance();	
+	$page = new pageMaitenance();	
 	
 	$page->setTpl("products-update", array(
 	
@@ -39,7 +39,7 @@ $app->get('/maitenance/products/:iduser',function($idassistance){
 
 $app->get('/maitenance/products/:idproduct/delete', function($idassistance){
 
-	UserMaitenance:: verifyLogin();
+	userMaitenance:: verifyLogin();
 
 	$product = new ProductMaitenance();
 
