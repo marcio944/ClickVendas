@@ -4,9 +4,9 @@ namespace Click\DB;
 
 class Sql {
 
-	const HOSTNAME = "dbecommerce.mysql.database.azure.com";
-	const USERNAME = "marcio@dbecommerce";
-	const PASSWORD = "MSS26101994#";
+	const HOSTNAME = "ec2-54-233-241-96.sa-east-1.compute.amazonaws.com";
+	const USERNAME = "root";
+	const PASSWORD = "123.456";
 	const DBNAME = "db_ecommerce";
 
 	private $conn;
