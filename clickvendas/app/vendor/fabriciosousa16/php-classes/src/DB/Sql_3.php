@@ -4,7 +4,7 @@ namespace Click\DB;
 
 class Sql_3 {
 
-	const HOSTNAME = "ec2-54-233-241-96.sa-east-1.compute.amazonaws.com";
+	const HOSTNAME = "ec2-18-228-195-21.sa-east-1.compute.amazonaws.com";
 	const USERNAME = "root";
 	const PASSWORD = "123.456";
 	const DBNAME = "administrator";
